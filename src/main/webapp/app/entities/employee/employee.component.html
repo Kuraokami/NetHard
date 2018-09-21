@@ -35,8 +35,8 @@
                 <td>{{employee.email}}</td>
                 <td>{{employee.phoneNumber}}</td>
                 <td>{{employee.hireDate | date:'medium'}}</td>
-                <td>{{employee.salary}}</td>
-                <td>{{employee.yearlySalary}}</td>
+                <td>{{employee.salary | currency}}</td>
+                <td>{{employee.yearlySalary | currency}}</td>
                 <td>{{employee.commissionPct}}</td>
                 <td jhiTranslate="{{'nethardApp.EmployeeType.' + employee.type}}">{{employee.type}}</td>
                 <td class="text-right">

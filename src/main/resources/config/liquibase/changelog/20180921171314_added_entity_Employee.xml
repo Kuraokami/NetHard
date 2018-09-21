@@ -16,7 +16,7 @@
     <!--
         Added the entity Employee.
     -->
-    <changeSet id="20180921132117-1" author="jhipster">
+    <changeSet id="20180921171314-1" author="jhipster">
         <createTable tableName="employee" remarks="The Employee entity.">
             <column name="id" type="bigint" autoIncrement="${autoIncrement}">
                 <constraints primaryKey="true" nullable="false"/>

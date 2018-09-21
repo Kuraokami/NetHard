@@ -5,6 +5,7 @@ import com.snake.nethard.domain.Employee;
 import com.snake.nethard.repository.EmployeeRepository;
 import com.snake.nethard.service.dto.EmployeeDTO;
 import com.snake.nethard.service.mapper.EmployeeMapper;
+import com.snake.nethard.service.util.EmployeeSalaryCalculator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -14,6 +15,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
+
+import static com.snake.nethard.service.util.EmployeeSalaryCalculator.calculateYearlySalary;
 
 /**
  * Service Implementation for managing Employee.
@@ -57,8 +60,9 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Transactional(readOnly = true)
     public Page<EmployeeDTO> findAll(Pageable pageable) {
         log.debug("Request to get all Employees");
-        return employeeRepository.findAll(pageable)
-            .map(employeeMapper::toDto);
+        Page<Employee> all = employeeRepository.findAll(pageable);
+        all.forEach(employee -> employee.setYearlySalary(calculateYearlySalary(employee)));
+        return all.map(employeeMapper::toDto);
     }
 
 
@@ -72,8 +76,10 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Transactional(readOnly = true)
     public Optional<EmployeeDTO> findOne(Long id) {
         log.debug("Request to get Employee : {}", id);
-        return employeeRepository.findById(id)
-            .map(employeeMapper::toDto);
+
+        Optional<Employee> employee = employeeRepository.findById(id);
+        employee.get().setYearlySalary(calculateYearlySalary(employee.get()));
+        return employee.map(employeeMapper::toDto);
     }
 
     /**
