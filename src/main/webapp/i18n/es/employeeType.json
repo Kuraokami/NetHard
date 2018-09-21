@@ -1,0 +1,9 @@
+{
+    "nethardApp": {
+        "EmployeeType" : {
+            "null": "",
+            "HOURLY": "HOURLY",
+            "MONTHLY": "MONTHLY"
+        }
+    }
+}

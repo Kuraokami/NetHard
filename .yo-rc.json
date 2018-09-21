@@ -1,0 +1,38 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.snake.nethard",
+      "nativeLanguage": "en"
+    },
+    "jhipsterVersion": "5.3.4",
+    "applicationType": "monolith",
+    "baseName": "Nethard",
+    "packageName": "com.snake.nethard",
+    "packageFolder": "com/snake/nethard",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "Mjk1YTljNjczZmM5NjQ4YTkwNWFjMGNmMWIxYzIzMzcxZmFjMzBhYzY3YmI2MGVmZTVkNDU5NWY0NThmOTE2OGViNWJkYjVmNWQ5YTJlZmMyMzQ3NDQ4NDA5ZmVlZmE1YTlkZWIyNWJlNWM5M2NiYzZlZjUyMTI3ODkzOGExNWU=",
+    "clientFramework": "angularX",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "enableTranslation": true,
+    "nativeLanguage": "en",
+    "languages": [
+      "en",
+      "es"
+    ]
+  }
+}

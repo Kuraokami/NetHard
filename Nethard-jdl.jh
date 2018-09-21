@@ -1,0 +1,29 @@
+/**
+ * The Employee entity.
+ */
+entity Employee {
+	/**
+	* The firstname attribute.
+	*/
+	firstName String,
+	lastName String,
+	email String,
+	phoneNumber String,
+	hireDate Instant,
+	salary Long,
+	yearlySalary Long,
+	commissionPct Long,
+	type EmployeeType
+}
+
+enum EmployeeType {
+    HOURLY, MONTHLY
+}
+
+// Set pagination options
+paginate Employee with infinite-scroll
+
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl

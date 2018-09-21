@@ -1,0 +1,11 @@
+version: '2'
+services:
+    nethard-postgresql:
+        image: postgres:10.4
+        # volumes:
+        #     - ~/volumes/jhipster/Nethard/postgresql/:/var/lib/postgresql/data/
+        environment:
+            - POSTGRES_USER=Nethard
+            - POSTGRES_PASSWORD=
+        ports:
+            - 5432:5432

@@ -1,0 +1,54 @@
+{
+    "name": "Employee",
+    "fields": [
+        {
+            "fieldName": "firstName",
+            "javadoc": "The firstname attribute.",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "lastName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "email",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "phoneNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "hireDate",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "salary",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "yearlySalary",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "commissionPct",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "type",
+            "fieldType": "EmployeeType",
+            "fieldValues": "HOURLY,MONTHLY"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20180921132117",
+    "javadoc": "The Employee entity.",
+    "entityTableName": "employee",
+    "dto": "mapstruct",
+    "pagination": "infinite-scroll",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
